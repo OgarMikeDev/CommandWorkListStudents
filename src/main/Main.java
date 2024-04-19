@@ -43,11 +43,11 @@ public class Main {
             System.out.println("Input on the console command \"PrintInformationAboutClients\", \"Remove\":");
             String command = new Scanner(System.in).nextLine();
             if (command.equals("PrintInformationAboutClients")) {
-                Student.printInformationAboutClients();
+                Student.printInformationAboutStudents();
             } else if (command.equals("Remove")) {
                 System.out.println("Input criterion for remove client: ");
                 long number = new Scanner(System.in).nextLong();
-                Student.removeClient(number);
+                Student.removeStudent(number);
             }
         }
     }
