@@ -74,14 +74,6 @@ public class Student implements Comparable<Student> {
 
     public static void removeStudent(long phoneNumber) {
         //Zahar Savchenko
-
-        for (Student student : setStudents) {
-            if (student.phoneNumber == phoneNumber) {
-                setStudents.remove(student);
-                break;
-            }
-        }
-
     }
 
     public static int getCountStudents() {
