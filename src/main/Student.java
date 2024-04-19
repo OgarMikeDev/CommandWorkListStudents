@@ -68,16 +68,15 @@ public class Student {
     }
 
     public static void removeClient(long phoneNumber) {
-<<<<<<< HEAD
         //Zahar Savchenko
-=======
-        for(Student student : setStudents){
-            if (student.phoneNumber == phoneNumber){
+
+        for (Student student : setStudents) {
+            if (student.phoneNumber == phoneNumber) {
                 setStudents.remove(student);
                 break;
             }
         }
->>>>>>> origin/main
+
     }
 
     public static int getCountStudents() {
