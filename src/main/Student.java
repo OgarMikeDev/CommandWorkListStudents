@@ -68,10 +68,13 @@ public class Student {
     }
 
     public static void removeClient(long phoneNumber) {
-        for(Student student : setStudents){
-            if (student.phoneNumber == phoneNumber){
-                setStudents.remove(student);
-                break;
+        Iterator<Student> clientIterator = setStudents.iterator();
+        while (clientIterator.hasNext()) {
+            Student student = clientIterator.next();
+            String name = student.getName();
+            if (student.getPhoneNumber() == phoneNumber) {
+                clientIterator.remove();
+                System.out.println("Client \"" + name + "\" removed!");
             }
         }
     }
