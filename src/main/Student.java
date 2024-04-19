@@ -63,11 +63,11 @@ public class Student {
         return Objects.hash(name, age, email, phoneNumber);
     }
 
-    public static void printInformationAboutClients() {
+    public static void printInformationAboutStudents() {
         //Rodion
     }
 
-    public static void removeClient(long phoneNumber) {
+    public static void removeStudent(long phoneNumber) {
         //Zahar Savchenko
 
         for (Student student : setStudents) {
