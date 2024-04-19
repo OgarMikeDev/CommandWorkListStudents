@@ -51,6 +51,11 @@ public class Student implements Comparable<Student> {
     }
 
     @Override
+    public int compareTo(Student o) {
+        return getName().compareTo(o.getName());
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -63,35 +68,17 @@ public class Student implements Comparable<Student> {
         return Objects.hash(name, age, email, phoneNumber);
     }
 
-    @Override
-    public int compareTo(Student o) {
-        return getName().compareTo(o.getName());
-    }
-
-    //Rodion
     public static void printInformationAboutStudents() {
-        for (Student student : setStudents) {
-            System.out.println(
-                    "Information about student \"" + student.getName() + "\":\n" + student
-            );
-        }
+        //Rodion
     }
 
     public static void removeStudent(long phoneNumber) {
-        Iterator<Student> clientIterator = setStudents.iterator();
-        while (clientIterator.hasNext()) {
-            Student student = clientIterator.next();
-            String name = student.getName();
-            if (student.getPhoneNumber() == phoneNumber) {
-                clientIterator.remove();
-                System.out.println("Client \"" + name + "\" removed!");
-            }
-        }
+        //Zahar Savchenko
     }
 
-    //  ZAHAR SELIVERSTOV
     public static int getCountStudents() {
-        return setStudents.size();
+        //Zahar Seliverstov
+        return 0;
     }
 
     @Override
