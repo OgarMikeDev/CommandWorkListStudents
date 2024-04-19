@@ -68,16 +68,12 @@ public class Student {
     }
 
     public static void removeClient(long phoneNumber) {
-        Iterator<Student> studentIterator = setStudents.iterator();
-        while (studentIterator.hasNext()) {
-            Student student = studentIterator.next();
+        for(Student student : setStudents){
             if (student.phoneNumber == phoneNumber){
-                String name = student.getName();
-                studentIterator.remove();
-                System.out.println("Student " + name + " has benn deleted from list.");
+                setStudents.remove(student);
+                break;
             }
         }
-
     }
 
     public static int getCountStudents() {
@@ -92,6 +88,4 @@ public class Student {
                 "\nEmail \"" + getEmail() + "\"," +
                 "\nPhone number " + getPhoneNumber() + ".\n";
     }
-
-
 }
