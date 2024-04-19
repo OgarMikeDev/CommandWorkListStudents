@@ -89,9 +89,9 @@ public class Student implements Comparable<Student> {
         }
     }
 
-    //  ZAHAR SELIVERSTOV
     public static int getCountStudents() {
-        return setStudents.size();
+        //Zahar Seliverstov
+        return 0;
     }
 
     @Override
