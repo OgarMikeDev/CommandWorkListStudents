@@ -68,7 +68,12 @@ public class Student {
     }
 
     public static void removeClient(long phoneNumber) {
-        //Zahar Savchenko
+        for(Student student : setStudents){
+            if (student.phoneNumber == phoneNumber){
+                setStudents.remove(student);
+                break;
+            }
+        }
     }
 
     public static int getCountStudents() {
