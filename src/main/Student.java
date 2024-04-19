@@ -67,8 +67,8 @@ public class Student {
         //Rodion
     }
 
-    public static void removeClient(long phoneNumber) {
-        // zahar ༼ つ ◕_◕ ༽つ
+    public static void removeStudent(long phoneNumber) {
+        // zahar007 (⌐■_■)
         Iterator<Student> clientIterator = setStudents.iterator();
         while (clientIterator.hasNext()) {
             Student student = clientIterator.next();
