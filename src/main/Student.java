@@ -71,9 +71,11 @@ public class Student {
         for(Student student : setStudents){
             if (student.phoneNumber == phoneNumber){
                 setStudents.remove(student);
-                break;
+                System.out.println("Student " + student.name + " has benn deleted from list.");
+                return;
             }
         }
+        System.out.println("Can't find student.");
     }
 
     public static int getCountStudents() {
@@ -88,4 +90,6 @@ public class Student {
                 "\nEmail \"" + getEmail() + "\"," +
                 "\nPhone number " + getPhoneNumber() + ".\n";
     }
+
+
 }
