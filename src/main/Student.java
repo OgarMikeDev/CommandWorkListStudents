@@ -79,9 +79,9 @@ public class Student {
 
     }
 
+    //  ZAHAR SELIVERSTOV
     public static int getCountStudents() {
-        //Zahar Seliverstov
-        return 0;
+        return setStudents.size();
     }
 
     @Override
