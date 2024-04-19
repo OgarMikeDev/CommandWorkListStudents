@@ -78,7 +78,15 @@ public class Student implements Comparable<Student> {
     }
 
     public static void removeStudent(long phoneNumber) {
-        //Zahar Savchenko
+        Iterator<Student> clientIterator = setStudents.iterator();
+        while (clientIterator.hasNext()) {
+            Student student = clientIterator.next();
+            String name = student.getName();
+            if (student.getPhoneNumber() == phoneNumber) {
+                clientIterator.remove();
+                System.out.println("Client \"" + name + "\" removed!");
+            }
+        }
     }
 
     public static int getCountStudents() {
