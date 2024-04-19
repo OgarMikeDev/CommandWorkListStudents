@@ -63,8 +63,13 @@ public class Student {
         return Objects.hash(name, age, email, phoneNumber);
     }
 
+    //Rodion
     public static void printInformationAboutStudents() {
-        //Rodion
+        for (Student student : setStudents) {
+            System.out.println(
+                    "Information about student \"" + student.getName() + "\":\n" + student
+            );
+        }
     }
 
     public static void removeStudent(long phoneNumber) {
