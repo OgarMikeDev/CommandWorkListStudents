@@ -68,8 +68,13 @@ public class Student implements Comparable<Student> {
         return getName().compareTo(o.getName());
     }
 
+    //Rodion
     public static void printInformationAboutStudents() {
-        //Rodion
+        for (Student student : setStudents) {
+            System.out.println(
+                    "Information about student \"" + student.getName() + "\":\n" + student
+            );
+        }
     }
 
     public static void removeStudent(long phoneNumber) {
