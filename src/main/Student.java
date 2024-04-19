@@ -2,7 +2,7 @@ package main;
 
 import java.util.*;
 
-public class Student {
+public class Student implements Comparable<Student> {
     private String name; //Mike
     private int age; //23
     private String email; //mura.m.v@email.ru
@@ -51,6 +51,11 @@ public class Student {
     }
 
     @Override
+    public int compareTo(Student o) {
+        return getName().compareTo(o.getName());
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -63,20 +68,12 @@ public class Student {
         return Objects.hash(name, age, email, phoneNumber);
     }
 
-    public static void printInformationAboutClients() {
+    public static void printInformationAboutStudents() {
         //Rodion
     }
 
-    public static void removeClient(long phoneNumber) {
-        Iterator<Student> clientIterator = setStudents.iterator();
-        while (clientIterator.hasNext()) {
-            Student student = clientIterator.next();
-            String name = student.getName();
-            if (student.getPhoneNumber() == phoneNumber) {
-                clientIterator.remove();
-                System.out.println("Client \"" + name + "\" removed!");
-            }
-        }
+    public static void removeStudent(long phoneNumber) {
+        //Zahar Savchenko
     }
 
     public static int getCountStudents() {
